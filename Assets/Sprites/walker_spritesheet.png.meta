@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 4462101384205101680
     second: walker_spritesheet_0
+  - first:
+      213: -1605957670871714255
+    second: walker_spritesheet_1
+  - first:
+      213: 3084590144895247101
+    second: walker_spritesheet_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,8 +102,8 @@ TextureImporter:
         y: 0
         width: 64
         height: 64
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -105,6 +111,48 @@ TextureImporter:
       bones: []
       spriteID: 6de410bfb5eeb6d47bb29373c10e96bc
       internalID: 4462101384205101680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walker_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca1898678545cf4184b313f0a3aa4df
+      internalID: -1605957670871714255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walker_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd42a33353b6cd41bb6138fecb9c54b
+      internalID: 3084590144895247101
       vertices: []
       indices: 
       edges: []
