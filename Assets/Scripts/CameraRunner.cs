@@ -8,7 +8,7 @@ public class CameraRunner : MonoBehaviour
 
     void Update()
     {
-        if (transform != null)
+        if (transform != null && player != null)
         {
             transform.position = new Vector3(player.position.x + 3, 0, -10);
         }
