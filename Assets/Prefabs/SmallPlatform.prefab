@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5211490646192122935}
-  m_Layer: 0
-  m_Name: GameObject
+  m_Layer: 8
+  m_Name: SmallPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4098496462490167086}
   - component: {fileID: 5894988402513370452}
   - component: {fileID: 2937394923295599039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
