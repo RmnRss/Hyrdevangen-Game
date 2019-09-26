@@ -345,8 +345,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436521253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 1, z: -4.373047}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1, y: 0.46, z: -4.373047}
+  m_LocalScale: {x: 2.0232613, y: 2.0232613, z: 2.0232613}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -412,6 +412,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   jumpForce: 4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!95 &436521259
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436521253}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a4e77b31aa0e5743a08a0dd69360065, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &448446212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6884813418023235046, guid: bda3296a50582fc4ca5caccc28ab09a7,
@@ -671,6 +693,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LargePlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 8735643813990714126, guid: 27772f0875b32a443a82e91436acafd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3375576389595445498, guid: 27772f0875b32a443a82e91436acafd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -725,6 +752,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771520032208978106, guid: 27772f0875b32a443a82e91436acafd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844846763445055031, guid: 27772f0875b32a443a82e91436acafd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727527279923975580, guid: 27772f0875b32a443a82e91436acafd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27772f0875b32a443a82e91436acafd8, type: 3}
