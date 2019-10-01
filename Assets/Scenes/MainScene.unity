@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 1460006823}
   - component: {fileID: 1460006822}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -384,6 +385,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 436521255}
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d509f98303be72f4986d8e89d5002167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &536927042
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,9 +823,9 @@ MonoBehaviour:
   obj:
   - {fileID: 3403462894905208780, guid: 48e9e059760e6ec418bab780b0e4a2ff, type: 3}
   - {fileID: 560867117822734312, guid: 0426047ce45d63d42ae37b4de83e8a1c, type: 3}
-  spawnMin: 1
-  spawnMax: 2
-  levelSize: 20
+  levelSize: 100
+  enemies:
+  - {fileID: 8436971790724640281, guid: 2c51cfab04be56c4480ae0ce2660381f, type: 3}
 --- !u!1001 &7562557432526034223
 PrefabInstance:
   m_ObjectHideFlags: 0
