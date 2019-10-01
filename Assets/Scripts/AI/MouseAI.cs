@@ -25,9 +25,7 @@ public class MouseAI : MonoBehaviour
 
             Vector3 target = transform.position + direction;
 
-            //transform.Translate(direction);
             transform.position = Vector3.MoveTowards(transform.position, target, 5 * Time.deltaTime);
-            Debug.Log("Moving");
         }
     }
 }
