@@ -46,24 +46,31 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(rigi2D.velocity.x));
         animator.SetFloat("VelocityY", rigi2D.velocity.y);
 
-        if(Physics2D.IsTouchingLayers(coll2D, enemyMask))
+        CheckCollision();
+    }
+
+    private void CheckCollision()
+    {
+        if (Physics2D.IsTouchingLayers(coll2D, enemyMask))
         {
             Collider2D[] results = new Collider2D[10];
             Physics2D.OverlapCollider(coll2D, new ContactFilter2D(), results);
 
-            foreach(Collider2D collider in results)
+            foreach (Collider2D collider in results)
             {
-                if(collider != null && collider.gameObject.layer ==  9)
+                if (collider != null && collider.gameObject.layer == 9)
                 {
-                    if(Mathf.Abs(collider.gameObject.transform.position.x - transform.position.x) > Mathf.Abs(collider.gameObject.transform.position.y - transform.position.y))
+                    if (Mathf.Abs(collider.gameObject.transform.position.x - transform.position.x) > Mathf.Abs(collider.gameObject.transform.position.y - transform.position.y))
                     {
                         Destroy(gameObject);
-                    } else
+                    }
+                    else
                     {
                         Destroy(collider.gameObject);
                     }
                 }
             }
         }
+
     }
 }
