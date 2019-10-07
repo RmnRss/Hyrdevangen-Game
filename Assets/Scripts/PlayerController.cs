@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
     public LayerMask enemyMask;
 
+    public Canvas canvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,8 @@ public class PlayerController : MonoBehaviour
         coll2D = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        canvas.enabled = false;
     }
 
     // Update is called once per frame
@@ -45,32 +51,35 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(rigi2D.velocity.x));
         animator.SetFloat("VelocityY", rigi2D.velocity.y);
-
-        CheckCollision();
     }
 
-    private void CheckCollision()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Physics2D.IsTouchingLayers(coll2D, enemyMask))
+        if (collision != null && collision.gameObject.layer == 9)
         {
-            Collider2D[] results = new Collider2D[10];
-            Physics2D.OverlapCollider(coll2D, new ContactFilter2D(), results);
-
-            foreach (Collider2D collider in results)
+            if (Mathf.Abs(collision.gameObject.transform.position.x - transform.position.x) > Mathf.Abs(collision.gameObject.transform.position.y - transform.position.y))
             {
-                if (collider != null && collider.gameObject.layer == 9)
-                {
-                    if (Mathf.Abs(collider.gameObject.transform.position.x - transform.position.x) > Mathf.Abs(collider.gameObject.transform.position.y - transform.position.y))
-                    {
-                        Destroy(gameObject);
-                    }
-                    else
-                    {
-                        Destroy(collider.gameObject);
-                    }
-                }
+                Die();
+            }
+            else
+            {
+                collision.gameObject.GetComponent<MouseAI>().Kill();
             }
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Finish")
+        {
+            canvas.enabled = true;
+        }
+    }
+
+    public void Die()
+    {
+        canvas.enabled = false;
+        SceneManager.LoadScene(0);
     }
 }
